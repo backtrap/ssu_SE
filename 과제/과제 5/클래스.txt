@@ -1,0 +1,92 @@
+ * Person
+- name : string
+- nationalD : int
+- address : iInt
+
+
+ * Customer -> Person
++ driverLicense : bool
++ nearCenter : int
+
+# reserve()
+# rental()
+# checkOut()
+
+
+ * Staff -> Person - Center
++ workingCenter : int
+- staffID : int
+# reserve()
+
+
+ * Center
++ location : int
+
+
+ * Reservation -> Center
++ carType : int
++ carSize : int
++ checkoutLocation : int
++ returnLocation : int
++ rentalDuration : int 
++ numberOfDrivers : int
+
+- choose_insurance(int) : int
+
+
+ * Center
++ centerLoaction : int
+- staffList<staff>[*]
+
+
+ * Rental (의존성)
+
+# retrieveReservation(Reservation) : int
+# validateLicense(deriverLicense) : bool
+# assignCar() : bool
+# chooseEquipment(int, int) : int
+# pay() : int
+
+
+ * In_rental
++ nearCenter : int
+
+# traceLocation() : int
+# replaceCar() : int
+# processAccident() : void
+
+
+ * Return 인터페이스
++ returnCenter : int
+# currentWileage : int 
+# fuelLevel : int
+# carCondition : int
+# gasOptions : int
+
+pay() : int
+
+
+ * Return_by_due -> Return 구현
+
+
+ * Return_after_due -> Return
+
+# addtional_fee()
+
+
+ * Insurance
+# no_coverage (license 확인) :int
+# damageWaiver : int
+# fullCoverage : int
+
+
+ * Business_Analytics
+- carInventory
+- rental
+- reservation
+- repair
+- profitSummary
+
+- 통계()
+
+
